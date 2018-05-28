@@ -1,0 +1,259 @@
+.user {
+	display: flex;
+	border-bottom: 1px solid #eee;
+}
+.user .avatar {
+	flex-shrink: 0;
+	flex-grow: 0;
+	width: calc( 100% / 4 );
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	@media (max-width: 860px) {
+		width: calc( 100% / 3 );
+	}
+
+	@media (max-width: 680px) {
+		width: calc( 100% / 2 )
+	}
+
+}
+.user .img-wrapper img {
+	width: auto;
+	height: 100%;
+}
+.user .info {
+	position: relative;
+	flex-grow: 1;
+	flex-shrink: 1;
+	width: calc( 100% - 240px );
+	padding: 30px;
+	border-right: 1px solid #eee;
+	background-color: $basic-grey;
+}
+.info .input-box {
+	position: relative;
+	max-width: 462px;
+	margin-bottom: 20px;
+	transition: background-color .2s, outline .2s;
+}
+.info .user-input {
+	width: 100%;
+	padding: 6px 80px 6px 6px;
+	border: none;
+	background: transparent;
+	font-size: 2rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+.info .language,
+.info .address {	
+	padding-left: 6px;
+	font-size: 1rem;
+	font-weight: 700;
+	color: $basic-font-grey;
+}
+.input-box.open {
+	background: $basic-white;
+	outline-style: solid;
+	outline-width: 1px;
+	outline-color: $input-outline;
+}
+.input-box .input-controls {
+	display: none;
+	position: absolute;	
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+}
+.input-box.open .input-controls {
+	display: flex;
+}
+.input-controls .submit-input,
+.input-controls .discard-input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 22px;
+	height: 22px;
+	border-radius: 50px;
+	border: none;
+	background-color: $basic-grey;
+	color: $basic-white;
+	cursor: pointer;
+	transition: background-color .3s;
+
+	& i {
+		font-size: 10px;		
+	}
+
+	&:hover {
+		background-color: $basic-black;		
+	}
+
+	&:active {
+		background-color: $skill-input-outline;
+	}
+}
+.input-controls .submit-input.sm-btn,
+.input-controls .discard-input.sm-btn {
+	width: 18px;
+	height: 18px;
+
+}
+.input-controls .submit-input {
+	margin-right: 5px;
+}
+.skills-list {
+	@include list-reset;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 9px;
+	min-height: 39px;
+}
+.skills-list .skill {
+	position: relative;
+	margin-right: 6px;
+	margin-bottom: 6px;
+	padding: 7px 17px;
+	font-weight: 500;
+	color: $basic-white;
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:last-of-type {
+		margin-right: 0px;
+	}
+
+	&:hover > .rm-btn {
+		opacity: 1;
+	}
+}
+.skills-list .skill.skill-template {
+	display: none;
+}
+.skill .rm-btn {
+	opacity: 0;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: -5px;
+	right: -5px;
+	background-color: red;
+	border: none;
+	border-radius: 50%;
+	color: $basic-white;
+	font-size: 10px;
+	cursor: pointer;
+	transition: background-color .3s, opacity .2s;
+
+	&:active {
+		background-color: $skill-input-outline;
+	}
+}
+.skill.bg-b {
+	background-color: $basic-black;
+
+} 
+.skill.bg-grey {
+	background-color: $basic-black;
+}
+.skill.bg-dgrey {
+	background-color: $skill-dark-grey;
+}
+.skill.bg-lgrey {
+	background-color: $skill-light-grey;
+}
+.skills-ib {	
+	max-width: 285px;
+	display: flex;
+	background-color: transparent;
+	padding: 5px 6px;
+	cursor: pointer;
+}
+
+.skills-ib .skill-input {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;	
+}
+.skills-ib .skill-type {
+	display: flex;
+	align-items: center;
+	margin-right: 7px;
+	padding: 0px 2px 3px 6px;
+	border: 1px solid $basic-font-grey;
+	border-radius: 5px;
+	background-color: buttonface;
+	font-size: 0.9rem;
+	opacity: 0;
+	transition: opacity .3s;
+}
+.skill-type .skill-value {
+	display: block;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+}
+.skills-ib .input-controls {
+	opacity: 0;
+}
+.skills-ib.open {
+	background-color: $basic-white;
+	outline-width: 1px;
+	outline-style: solid;
+	outline-color: $skill-input-outline;
+}
+.skills-ib.open .skill-type {
+	opacity: 1;
+}
+.skills-ib.open .input-controls {
+	display: block;
+	position: static;
+	opacity: 1;
+}
+.skill-type .value-up,
+.skill-type .value-down {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: color .2s;
+	
+
+	&:hover {
+		color: $basic-font-grey;
+	}
+
+	&:active {
+		color: $skill-input-outline;
+	}
+}
+.user .print-btn {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	padding: 7px 17px;
+	text-transform: uppercase;
+	font-weight: 700;	
+	color: $basic-white;
+	border: none;
+	border-radius: 50px;
+	background-color: $basic-black;
+	cursor: pointer;
+	transition: background-color .3s;
+
+	&:hover {
+		background-color: $skill-input-outline;
+		color: $basic-font-grey;
+	}
+
+	&:active {
+		background-color: $basic-font-grey;
+		color: $basic-white;
+	}
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/fontawesome-all.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="b-card">
+
+			<div class="user">
+				<div class="avatar" style='background-image: url(img/user-photo.jpg)'></div>
+				<div class="info">
+					<div class="input-box">
+						<input type="text" value ="John Smith" class="user-input name" placeholder="Enter your name:" />
+						<div class="input-controls">
+							<button class="submit-input">
+								<i class="fas fa-check"></i>
+							</button>
+							<button class="discard-input">
+								<i class="fas fa-times"></i>
+							</button>
+						</div>
+					</div>
+					<div class="input-box">						
+						<input type="text" value ="Portland, Oregon, USA" class="user-input address" placeholder="Enter your location:" />
+						<div class="input-controls">
+							<button class="submit-input sm-btn">
+								<i class="fas fa-check"></i>
+							</button>
+							<button class="discard-input sm-btn">
+								<i class="fas fa-times"></i>
+							</button>
+						</div>
+					</div>
+					<div class="input-box">
+						<input type="text" value ="English" class="user-input language" placeholder="Enter your language:" />
+						<div class="input-controls">
+							<button class="submit-input sm-btn">
+								<i class="fas fa-check"></i>
+							</button>
+							<button class="discard-input sm-btn">
+								<i class="fas fa-times"></i>
+							</button>
+						</div>
+					</div>					
+					<ul class="skills-list">
+						<li class="skill bg-b">
+							<span>PHP</span>
+							<button class="rm-btn"><i class="fas fa-times"></i></button>
+						</li>
+						<li class="skill bg-b">
+							<span>RUBY</span>
+							<button class="rm-btn"><i class="fas fa-times"></i></button>
+						</li>
+						<li class="skill bg-dgrey">
+							<span>JAVASCRIPT</span>
+							<button class="rm-btn"><i class="fas fa-times"></i></button>
+						</li>
+						<li class="skill bg-lgrey">
+							<span>ACTIONSCRIPT</span>
+							<button class="rm-btn"><i class="fas fa-times"></i></button>
+						</li>
+						<li class="skill skill-template">
+							<span></span>
+							<button class="rm-btn"><i class="fas fa-times"></i></button>
+						</li>
+					</ul>
+					<div class="skills-ib">
+						<input type="text" class="skill-input skill" name="skill" placeholder="Add skills" />
+						<div class="skill-type">
+							<input type="text" class="skill-value" value="Strong" disabled />
+							<div class="skill-value-controls">
+								<button class="value-up"><i class="fas fa-caret-up"></i></button>
+								<button class="value-down"><i class="fas fa-caret-down"></i></button>
+							</div>
+						</div>
+						<div class="input-controls">
+							<button class="submit-input">
+								<i class="fas fa-check"></i>
+							</button>
+						</div>
+					</div>
+					<button class='print-btn'>Print this page</button>
+				</div>
+			</div>
+
+			<div class="overview">
+				<div class="block">
+					<h2 class="header">Portfolio</h2>
+					<p class="summary">PHP, Ruby, Javascript</p>
+					<ul class="items-list">
+						<li class="item">
+							<strong>NavalPlan,</strong>
+							<span>PHP, Ruby</span>
+						</li>
+						<li class="item">
+							<strong>MyTime,</strong>
+							<span>Javascript</span>
+						</li>
+						<li class="item">
+							<strong>Formidable,</strong>
+							<span>PHP, Ruby</span>
+						</li>
+						<li class="item">
+							<strong>MyTime,</strong>
+							<span>Javascript</span>
+						</li>
+						<li class="item">
+							<strong>Monsoon,</strong>
+							<span>ActionScript</span>
+						</li>
+					</ul>
+				</div>
+				<div class="block">
+					<h2 class="header">Exprerience</h2>
+					<ul class="items-list add-mt">
+						<li class="item">
+							<strong>PHP,</strong>
+							<span>6 years</span>
+						</li>
+						<li class="item">
+							<strong>Ruby,</strong>
+							<span>7 years</span>
+						</li>
+						<li class="item">
+							<strong>Javascript,</strong>
+							<span>4 years</span>
+						</li>
+						<li class="item">
+							<strong>ActionScript,</strong>
+							<span>3 years</span>
+						</li>						
+					</ul>
+				</div>
+				<div class="block" style="background-image: url(img/code-sample.jpg)">
+					<h2 class="header">Sample codes and algorithms</h2>
+				</div>
+				<div class="block">
+					<h2 class="header">Availablility</h2>
+					<p class="comment">Full-time</p>
+					<h3 class="subheader">Prefered environment</h3>
+					<div class="">Git, GitHub, vim, emacs, Jnekins, Mac OSX</div>
+				</div>
+				<div class="block">
+					<h2 class="header">The mos amazing</h2>
+					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quod explicabo libero consequatur eaque, pariatur, doloribus maiores aspernatur id, error reprehenderit facere! Dicta, perspiciatis fugit. Rem molestias tempore praesentium atque.</p>
+					<span class="author">- Martin</span>
+				</div>
+				<div class="block">
+					<h2 class="header">In clients I look for ...</h2>
+					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum provident excepturi tempora dolores voluptate quas laborum fugiat blanditiis quis laboriosam voluptas incidunt, maiores quaerat cupiditate necessitatibus hic voluptates pariatur.</p>
+					<span class="author">- Martin</span>
+				</div>
+				<div class="block"></div>
+				<div class="block">
+					<h2 class="header">Note</h2>
+					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eius fuga numquam quaerat nobis impedit temporibus porro totam! Cum quis consectetur sint doloremque eum saepe quae esse dolorem vel expedita!</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.overview {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.overview .block {
+	flex-grow: 0;
+	flex-shrink: 1;
+	width: calc( 100% / 4 );
+	border: 1px solid #eee;
+	border-left: none;
+	border-top: none;	
+	color: $basic-font-grey;
+
+	@media (max-width: 860px) {
+		width: calc( 100% / 3 );
+	}
+
+	@media (max-width: 680px) {
+		width: calc( 100% / 2 );
+	}
+}
+.block .header {
+	margin-bottom: 0;
+	text-align: center;
+}
+.block .comment,
+.block .summary {
+	text-align: center;
+}
+.block .summary {
+	margin-top: 0;
+}
+.block .items-list.add-mt {
+	margin-top: 32px;
+}
+.block .text {
+	font-style: italic;
+	padding-top: 10px;
+	padding-left: 8px;
+	background-image: url(../img/svg/open-quote.svg), url(../img/svg/closing-quote.svg);
+	background-position: left top, right bottom;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 36px 24px, 36px 24px;
+}

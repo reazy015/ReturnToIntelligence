@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+}
+input[type="text"]::-ms-clear {
+	display: none;
+}
+input[type="text"]:focus {
+	outline: none
+}
+button:focus {
+	outline: none;
+}
+.container {
+	max-width: 980px;
+	margin: auto;
+	padding: 10px;
+}
+.b-card {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	border: 1px solid #eee;
+	border-bottom: none;
+	border-right: none;
+}
