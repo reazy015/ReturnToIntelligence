@@ -8,6 +8,7 @@
 	flex-grow: 0;
 	flex-shrink: 1;
 	width: calc( 100% / 4 );
+	min-height: 240px;
 	border: 1px solid #eee;
 	border-left: none;
 	border-top: none;	
@@ -20,14 +21,45 @@
 	@media (max-width: 680px) {
 		width: calc( 100% / 2 );
 	}
+
+	@media (max-width: 475px) {
+		width: 100%;
+	}
 }
 .block .header {
+	margin-top: 0;
 	margin-bottom: 0;
+	padding-top: 22px;
 	text-align: center;
+	font-size: 1.2rem;
+}
+.block.empty {
+	@media (max-width: 475px) {
+		display: none;
+	}
+}
+.header.header-bg {
+	background: rgba(255, 255, 255, 0.9);
+	padding-bottom: 15px;
 }
 .block .comment,
 .block .summary {
 	text-align: center;
+}
+.comment.comment-hs {
+	margin-bottom: 0px;
+	padding-bottom: 15px;
+	font-size: 2rem;
+	font-weight: 600;
+	border-bottom: 1px solid #eee;
+}
+.block .subheader {
+	text-align: center;
+}
+.block .skills-available {
+	text-align: center;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 .block .summary {
 	margin-top: 0;
@@ -35,12 +67,24 @@
 .block .items-list.add-mt {
 	margin-top: 32px;
 }
-.block .text {
-	font-style: italic;
-	padding-top: 10px;
-	padding-left: 8px;
+.block .text-wrapper {
+	height: 80%;
+	padding: 20px 24px;
 	background-image: url(../img/svg/open-quote.svg), url(../img/svg/closing-quote.svg);
-	background-position: left top, right bottom;
+	background-position: 5% 5%, 95% 100%;
 	background-repeat: no-repeat, no-repeat;
-	background-size: 36px 24px, 36px 24px;
+	background-size: 40px 34px, 40px 34px;
+}
+.block .text {
+	margin-bottom: 15px;	
+	font-size: 0.9rem;
+	font-weight: 500;
+	font-style: italic;
+}
+.block .author {
+	display: inline-block;
+	width: 100%;
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-align: right;
 }

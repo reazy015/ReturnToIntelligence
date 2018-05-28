@@ -41,7 +41,7 @@ $(document).ready(function() {
 			$('.skill-input').val('');
 			$('.skills-ib').removeClass('open');
 		} else {
-			alert('Please, enter any skill own.');			
+			alert('Please, choose level of your skill and than enter any skill you own.');			
 		}	
 	}
 
@@ -65,18 +65,23 @@ $(document).ready(function() {
 		inputFlag = false;
 	});
 
-	$('.submit-input').mousedown('click', function() {
-		inputFlag = true;		
+	$('.submit-input').mousedown(function() {
+		inputFlag = true;	
+		$(this).closest('.input-box').find('.user-input').blur();
 	});
 
-	$('.user-input').keyup(function(e) {
+	$('.discard-input').mousedown(function() {
+		$(this).closest('.input-box').find('.user-input').blur();
+	});
+
+	$('.user-input').keydown(function(e) {		
     	if (e.keyCode == ENTER_KEY_CODE) {
     		inputFlag = true;
-	       $(this).blur();
+	       $(this).blur();	       
     	}
 
     	if (e.keyCode == ESC_KEY_CODE) {
-	       $(this).blur();
+	       $(this).blur();	       
     	}
 	});
 
@@ -116,7 +121,7 @@ $(document).ready(function() {
 
 	$('.skills-ib .submit-input').mousedown(submitUserSkillInput);
 
-	$('.skill-input').keyup(function(e) {
+	$('.skill-input').keydown(function(e) {
     	if (e.keyCode == ENTER_KEY_CODE) {
     		submitUserSkillInput();
     		$(this).blur();
